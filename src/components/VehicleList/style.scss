@@ -1,0 +1,183 @@
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.VehicleList {
+  width: 100%;
+}
+
+.VehicleItem {
+  position: relative;
+  border: 1px solid lightgrey;
+  float: left;
+
+  .VehicleItem__Blurb {
+
+    .VehicleItem__Blurb-NameConatainer {
+
+      .VehicleItem__Blurb-Name {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .VehicleItem__Blurb-ExtrasButton {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .VehicleItem__Blurb-Extras {
+    background-color: white;
+    border: 1px solid grey;
+    margin-top: 2px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    right: 4px;
+  }
+}
+
+@media  (min-width: 720px) { 
+
+  .VehicleItem {
+    border: 1px solid lightgrey;
+    float: left;
+    min-height: 350px;
+    width: 300px;
+
+    .VehicleItem__Image {
+      max-width: 100%;
+    }
+
+    .VehicleItem__Blurb {
+      padding: 5px;
+      text-align: center;
+
+      .VehicleItem__Blurb-NameConatainer {
+        margin: 20px;
+
+        .VehicleItem__Blurb-Name {
+          border-bottom: 2px solid black;
+          border-top: 2px solid black;
+          padding: 5px;
+        }
+      }
+
+      .VehicleItem__Blurb-Price {
+        margin: 10px;
+      }
+
+      .VehicleItem__Blurb-Description {
+        margin: 10px;
+      }   
+    }
+  }
+
+  .smallScreen--hidden {
+    display: block;
+  }
+
+  .largeScreen--hidden {
+    display: none;    
+  }
+}
+
+@media (max-width: 720px) {  
+
+  .VehicleItem {
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    width: 100%;
+
+    .VehicleItem__Image {
+      float: left;
+      margin-right: 20px;
+      max-width: 110px;
+    }
+
+    .VehicleItem__Blurb {
+      padding-right: 10px;
+      text-align: left;
+      vertical-align: middle;
+
+      .VehicleItem__Blurb-NameConatainer {
+        margin-bottom: 3px;
+      }
+
+      .VehicleItem__Blurb-Price {
+        margin-bottom: 10px;
+      }   
+
+      .VehicleItem__Blurb-Description {
+        margin-right: 20px;
+      }   
+    }
+
+    .VehicleItem__Blurb-ExtrasButton {
+      
+    }
+  
+    .VehicleItem__Blurb-Extras {
+      top: 2px;
+      left: 4px;
+      bottom: 2px;
+      right: 40px;
+    }
+  }
+
+  .smallScreen--hidden {
+    display: none;      
+  }
+
+  .largeScreen--hidden {
+    display: block;    
+  }
+}
+
+@media (max-width: 600px) {  
+
+  .VehicleItem {
+    font-size: 11px;
+
+    .VehicleItem__Image {
+      margin-right: 15px;
+      max-width: 90px;
+    }
+  }
+}
+
+@media (max-width: 360px) {  
+
+  .VehicleItem {
+    font-size: 9px;
+
+    .VehicleItem__Image {
+      margin-right: 10px;
+      max-width: 80px;
+    }
+
+    .VehicleItem__Blurb {
+      padding-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 320px) {  
+
+  .VehicleItem {
+    font-size: 7px;
+
+    .VehicleItem__Image {
+      margin-right: 5px;
+      max-width: 60px;
+    }
+
+    .VehicleItem__Blurb {
+      padding-right: 5px;
+    }
+  }
+}
